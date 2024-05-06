@@ -1,0 +1,522 @@
+148882-v1.0.0/epan/dissectors/packet-per.c:1663:14: error: Uninitialized variable: ext_length [uninitvar]
+   offset += ext_length * 8;
+             ^
+148891-v1.0.0/epan/dissectors/packet-http.c:199:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(header_fields, header_name, header_field_t)
+^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148891-v1.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148895-v1.0.0/epan/dissectors/packet-per.c:1663:14: error: Uninitialized variable: ext_length [uninitvar]
+   offset += ext_length * 8;
+             ^
+148900-v1.0.0/epan/dissectors/packet-etch.c:310:11: warning: %x in format string (no. 1) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+      if (sscanf(&line[0], "%x", &hash) != 1)
+          ^
+148905-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+148906-v1.0.0/epan/dissectors/packet-ber.c:256:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(oid_users, oid, oid_user_t)
+^
+148907-v1.0.0/epan/dissectors/packet-dtls.c:602:35: warning: Either the condition '!ssl' is redundant or there is possible null pointer dereference: ssl. [nullPointerRedundantCheck]
+                   record_length, ssl->state);
+                                  ^
+148907-v1.0.0/epan/dissectors/packet-dtls.c:603:7: note: Assuming that condition '!ssl' is not redundant
+  if (!ssl || (!save_plaintext && !(ssl->state & SSL_HAVE_SESSION_KEY))) {
+      ^
+148907-v1.0.0/epan/dissectors/packet-dtls.c:602:35: note: Null pointer dereference
+                   record_length, ssl->state);
+                                  ^
+148907-v1.0.0/epan/dissectors/packet-dtls.c:2301:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(sslkeylist_uats,ipaddr,ssldecrypt_assoc_t)
+^
+148908-v1.0.0/epan/dissectors/packet-reload.c:761:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(kindidlist_uats,id,kind_t)
+^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:585:29: error: Null pointer dereference: pass_list [nullPointer]
+    memcpy(nt_password_hash,pass_list[i].md4,NTLMSSP_KEY_LEN);
+                            ^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:546:25: note: Assignment 'pass_list=NULL', assigned value is 0
+  md4_pass *pass_list = NULL;
+                        ^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:585:29: note: Null pointer dereference
+    memcpy(nt_password_hash,pass_list[i].md4,NTLMSSP_KEY_LEN);
+                            ^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:741:26: warning:inconclusive: Possible null pointer dereference: clientchallenge [nullPointer]
+     memcpy(challenges+8,clientchallenge,8);
+                         ^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:1547:82: note: Calling function 'create_ntlmssp_v1_key', 3rd argument 'NULL' value is 0
+      create_ntlmssp_v1_key(gbl_nt_password, conv_ntlmssp_info->server_challenge,NULL, sspkey,NULL,conv_ntlmssp_info->flags,conv_ntlmssp_info->ntlm_response.contents,conv_ntlmssp_info->lm_response.contents);
+                                                                                 ^
+148919-v1.0.0/epan/dissectors/packet-ntlmssp.c:741:26: note: Null pointer dereference
+     memcpy(challenges+8,clientchallenge,8);
+                         ^
+148921-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+148922-v1.0.0/epan/dissectors/packet-dtls.c:602:35: warning: Either the condition '!ssl' is redundant or there is possible null pointer dereference: ssl. [nullPointerRedundantCheck]
+                   record_length, ssl->state);
+                                  ^
+148922-v1.0.0/epan/dissectors/packet-dtls.c:603:7: note: Assuming that condition '!ssl' is not redundant
+  if (!ssl || (!save_plaintext && !(ssl->state & SSL_HAVE_SESSION_KEY))) {
+      ^
+148922-v1.0.0/epan/dissectors/packet-dtls.c:602:35: note: Null pointer dereference
+                   record_length, ssl->state);
+                                  ^
+148922-v1.0.0/epan/dissectors/packet-dtls.c:2301:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(sslkeylist_uats,ipaddr,ssldecrypt_assoc_t)
+^
+148923-v1.0.0/epan/tvbuff.c:887:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+148923-v1.0.0/epan/tvbuff.c:867:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+148923-v1.0.0/epan/tvbuff.c:887:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+148923-v1.0.0/epan/tvbuff.c:1034:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+148923-v1.0.0/epan/tvbuff.c:1013:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+148923-v1.0.0/epan/tvbuff.c:1034:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+148937-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+148937-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 5) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+148938-v1.0.0/epan/dissectors/packet-wtp.c:401:2: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed char'. [invalidPrintfArgType_uint]
+ printf("WTP packet %u: tree = %p, pdu = %s (%u) length: %u\n",
+ ^
+148938-v1.0.0/epan/dissectors/packet-wtp.c:723:4: error: printf format string requires 6 parameters but only 5 are given. [wrongPrintfScanfArgNum]
+   printf("WTP: Packet %u %s -> %d: wsp_tvb = %p, fd_wtp = %p, frame = %u\n",
+   ^
+148940-v1.0.0/epan/dissectors/packet-isakmp.c:4897:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_BUFFER_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_BUFFER_CB_DEF(ikev1_users, icookie, ikev1_uat_data_key_t, icookie, icookie_len)
+^
+148948-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+148952-v1.0.0/epan/dissectors/packet-gsm_rlcmac.c:1369:1: error: There is an unknown macro here somewhere. Configuration is required. If CSN_DESCR_END is a macro then please configure it. [unknownMacro]
+CSN_DESCR_END     (EGPRS_AckNack_Desc_t)
+^
+148955-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+148955-v1.0.0/plugins/ethercat/packet-ecatmb.c:1299:7: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+      pinfo->private_data = &hdr;
+      ^
+148956-v1.0.0/epan/dissectors/packet-reload.c:761:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(kindidlist_uats,id,kind_t)
+^
+148956-v1.0.0/epan/dissectors/packet-sccp.c:3453:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(sccp_users, ni, sccp_user_t)
+^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148956-v1.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148956-v1.0.0/epan/emem.c:827:10: warning: Size of pointer 'cptr' used instead of size of its data. [pointerSize]
+  memcpy(cptr + pad, &free_list->canary_last, sizeof(void *));
+         ^
+148956-v1.0.0/epan/emem.c:1026:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+148956-v1.0.0/epan/emem.c:1031:39: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ g_vsnprintf (dst, (gulong) len, fmt, ap2);
+                                      ^
+148956-v1.0.0/epan/emem.c:1032:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+148956-v1.0.0/epan/emem.c:2268:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+148956-v1.0.0/epan/emem.c:2280:79: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+  full_len = g_vsnprintf(&strbuf->str[strbuf->len], (gulong) add_len, format, ap2);
+                                                                              ^
+148956-v1.0.0/epan/emem.c:2284:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+148956-v1.0.0/epan/emem.c:416:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   fprintf (stderr, "\tChunk allocation size: %10u\n", EMEM_PACKET_CHUNK_SIZE);
+   ^
+148956-v1.0.0/epan/emem.c:494:2: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+ fprintf (stderr, "\tChunk allocation size: %10u\n",
+ ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1767:9: warning: Identical condition and return expression 'name!=NULL', return value is always 0 [identicalConditionAfterEarlyExit]
+ return name;
+        ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1761:11: note: If condition 'name!=NULL' is true, the function will return/exit
+ if (name != NULL)
+          ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1767:9: note: Returning identical expression 'name!=NULL'
+ return name;
+        ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1783:9: warning: Identical condition and return expression 'name!=NULL', return value is always 0 [identicalConditionAfterEarlyExit]
+ return name;
+        ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1777:11: note: If condition 'name!=NULL' is true, the function will return/exit
+ if (name != NULL)
+          ^
+148959-v1.0.0/epan/dissectors/packet-afp.c:1783:9: note: Returning identical expression 'name!=NULL'
+ return name;
+        ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1767:9: warning: Identical condition and return expression 'name!=NULL', return value is always 0 [identicalConditionAfterEarlyExit]
+ return name;
+        ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1761:11: note: If condition 'name!=NULL' is true, the function will return/exit
+ if (name != NULL)
+          ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1767:9: note: Returning identical expression 'name!=NULL'
+ return name;
+        ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1783:9: warning: Identical condition and return expression 'name!=NULL', return value is always 0 [identicalConditionAfterEarlyExit]
+ return name;
+        ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1777:11: note: If condition 'name!=NULL' is true, the function will return/exit
+ if (name != NULL)
+          ^
+148966-v1.0.0/epan/dissectors/packet-afp.c:1783:9: note: Returning identical expression 'name!=NULL'
+ return name;
+        ^
+148966-v1.0.0/epan/dissectors/packet-ber.c:256:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(oid_users, oid, oid_user_t)
+^
+148966-v1.0.0/epan/dissectors/packet-dtls.c:602:35: warning: Either the condition '!ssl' is redundant or there is possible null pointer dereference: ssl. [nullPointerRedundantCheck]
+                   record_length, ssl->state);
+                                  ^
+148966-v1.0.0/epan/dissectors/packet-dtls.c:603:7: note: Assuming that condition '!ssl' is not redundant
+  if (!ssl || (!save_plaintext && !(ssl->state & SSL_HAVE_SESSION_KEY))) {
+      ^
+148966-v1.0.0/epan/dissectors/packet-dtls.c:602:35: note: Null pointer dereference
+                   record_length, ssl->state);
+                                  ^
+148966-v1.0.0/epan/dissectors/packet-dtls.c:2301:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(sslkeylist_uats,ipaddr,ssldecrypt_assoc_t)
+^
+148966-v1.0.0/epan/dissectors/packet-etch.c:310:11: warning: %x in format string (no. 1) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+      if (sscanf(&line[0], "%x", &hash) != 1)
+          ^
+148966-v1.0.0/epan/dissectors/packet-gsm_rlcmac.c:1369:1: error: There is an unknown macro here somewhere. Configuration is required. If CSN_DESCR_END is a macro then please configure it. [unknownMacro]
+CSN_DESCR_END     (EGPRS_AckNack_Desc_t)
+^
+148966-v1.0.0/epan/dissectors/packet-http.c:199:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(header_fields, header_name, header_field_t)
+^
+148966-v1.0.0/epan/dissectors/packet-isakmp.c:4897:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_BUFFER_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_BUFFER_CB_DEF(ikev1_users, icookie, ikev1_uat_data_key_t, icookie, icookie_len)
+^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:585:29: error: Null pointer dereference: pass_list [nullPointer]
+    memcpy(nt_password_hash,pass_list[i].md4,NTLMSSP_KEY_LEN);
+                            ^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:546:25: note: Assignment 'pass_list=NULL', assigned value is 0
+  md4_pass *pass_list = NULL;
+                        ^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:585:29: note: Null pointer dereference
+    memcpy(nt_password_hash,pass_list[i].md4,NTLMSSP_KEY_LEN);
+                            ^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:741:26: warning:inconclusive: Possible null pointer dereference: clientchallenge [nullPointer]
+     memcpy(challenges+8,clientchallenge,8);
+                         ^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:1547:82: note: Calling function 'create_ntlmssp_v1_key', 3rd argument 'NULL' value is 0
+      create_ntlmssp_v1_key(gbl_nt_password, conv_ntlmssp_info->server_challenge,NULL, sspkey,NULL,conv_ntlmssp_info->flags,conv_ntlmssp_info->ntlm_response.contents,conv_ntlmssp_info->lm_response.contents);
+                                                                                 ^
+148966-v1.0.0/epan/dissectors/packet-ntlmssp.c:741:26: note: Null pointer dereference
+     memcpy(challenges+8,clientchallenge,8);
+                         ^
+148966-v1.0.0/epan/dissectors/packet-per.c:1663:14: error: Uninitialized variable: ext_length [uninitvar]
+   offset += ext_length * 8;
+             ^
+148966-v1.0.0/epan/dissectors/packet-reload.c:761:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(kindidlist_uats,id,kind_t)
+^
+148966-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+148966-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 5) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+148966-v1.0.0/epan/dissectors/packet-sccp.c:3453:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(sccp_users, ni, sccp_user_t)
+^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+148966-v1.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+148966-v1.0.0/epan/dissectors/packet-wtp.c:401:2: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed char'. [invalidPrintfArgType_uint]
+ printf("WTP packet %u: tree = %p, pdu = %s (%u) length: %u\n",
+ ^
+148966-v1.0.0/epan/dissectors/packet-wtp.c:723:4: error: printf format string requires 6 parameters but only 5 are given. [wrongPrintfScanfArgNum]
+   printf("WTP: Packet %u %s -> %d: wsp_tvb = %p, fd_wtp = %p, frame = %u\n",
+   ^
+148966-v1.0.0/epan/emem.c:827:10: warning: Size of pointer 'cptr' used instead of size of its data. [pointerSize]
+  memcpy(cptr + pad, &free_list->canary_last, sizeof(void *));
+         ^
+148966-v1.0.0/epan/emem.c:1026:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+148966-v1.0.0/epan/emem.c:1031:39: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ g_vsnprintf (dst, (gulong) len, fmt, ap2);
+                                      ^
+148966-v1.0.0/epan/emem.c:1032:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+148966-v1.0.0/epan/emem.c:2268:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+148966-v1.0.0/epan/emem.c:2280:79: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+  full_len = g_vsnprintf(&strbuf->str[strbuf->len], (gulong) add_len, format, ap2);
+                                                                              ^
+148966-v1.0.0/epan/emem.c:2284:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+148966-v1.0.0/epan/emem.c:416:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   fprintf (stderr, "\tChunk allocation size: %10u\n", EMEM_PACKET_CHUNK_SIZE);
+   ^
+148966-v1.0.0/epan/emem.c:494:2: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+ fprintf (stderr, "\tChunk allocation size: %10u\n",
+ ^
+148966-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+148966-v1.0.0/epan/tvbuff.c:887:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+148966-v1.0.0/epan/tvbuff.c:867:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+148966-v1.0.0/epan/tvbuff.c:887:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+148966-v1.0.0/epan/tvbuff.c:1034:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+148966-v1.0.0/epan/tvbuff.c:1013:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+148966-v1.0.0/epan/tvbuff.c:1034:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+148966-v1.0.0/plugins/ethercat/packet-ecatmb.c:1299:7: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+      pinfo->private_data = &hdr;
+      ^
+231344-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+231345-v1.0.0/epan/tvbuff.c:887:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+231345-v1.0.0/epan/tvbuff.c:867:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+231345-v1.0.0/epan/tvbuff.c:887:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length,
+                                      ^
+231345-v1.0.0/epan/tvbuff.c:1034:39: warning:inconclusive: Possible null pointer dereference: member_tvb [nullPointer]
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+231345-v1.0.0/epan/tvbuff.c:1013:27: note: Assignment 'member_tvb=NULL', assigned value is 0
+ tvbuff_t   *member_tvb = NULL;
+                          ^
+231345-v1.0.0/epan/tvbuff.c:1034:39: note: Null pointer dereference
+ if (check_offset_length_no_exception(member_tvb->length, member_tvb->reported_length, abs_offset - composite->start_offsets[i],
+                                      ^
+231348-v1.0.0/epan/dissectors/packet-dtls.c:602:35: warning: Either the condition '!ssl' is redundant or there is possible null pointer dereference: ssl. [nullPointerRedundantCheck]
+                   record_length, ssl->state);
+                                  ^
+231348-v1.0.0/epan/dissectors/packet-dtls.c:603:7: note: Assuming that condition '!ssl' is not redundant
+  if (!ssl || (!save_plaintext && !(ssl->state & SSL_HAVE_SESSION_KEY))) {
+      ^
+231348-v1.0.0/epan/dissectors/packet-dtls.c:602:35: note: Null pointer dereference
+                   record_length, ssl->state);
+                                  ^
+231348-v1.0.0/epan/dissectors/packet-dtls.c:2301:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(sslkeylist_uats,ipaddr,ssldecrypt_assoc_t)
+^
+231354-v1.0.0/epan/dissectors/packet-reload.c:761:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(kindidlist_uats,id,kind_t)
+^
+231355-v1.0.0/epan/dissectors/packet-etch.c:310:11: warning: %x in format string (no. 1) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+      if (sscanf(&line[0], "%x", &hash) != 1)
+          ^
+231358-v1.0.0/epan/dissectors/packet-wtp.c:401:2: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed char'. [invalidPrintfArgType_uint]
+ printf("WTP packet %u: tree = %p, pdu = %s (%u) length: %u\n",
+ ^
+231358-v1.0.0/epan/dissectors/packet-wtp.c:723:4: error: printf format string requires 6 parameters but only 5 are given. [wrongPrintfScanfArgNum]
+   printf("WTP: Packet %u %s -> %d: wsp_tvb = %p, fd_wtp = %p, frame = %u\n",
+   ^
+231366-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+231366-v1.0.0/epan/dissectors/packet-rtcp.c:615:5: warning: %u in format string (no. 5) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("#%u: %srtcp_add_address(%s, %u, %u, %s, %u\n", pinfo->fd->num, (srtcp_info)?"s":"", ep_address_to_str(addr), port, other_port, setup_method, setup_frame_number);
+    ^
+231371-v1.0.0/epan/dissectors/packet-reload.c:761:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(kindidlist_uats,id,kind_t)
+^
+231371-v1.0.0/epan/dissectors/packet-sccp.c:3453:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_DEC_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_DEC_CB_DEF(sccp_users, ni, sccp_user_t)
+^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231371-v1.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231371-v1.0.0/epan/emem.c:827:10: warning: Size of pointer 'cptr' used instead of size of its data. [pointerSize]
+  memcpy(cptr + pad, &free_list->canary_last, sizeof(void *));
+         ^
+231371-v1.0.0/epan/emem.c:1026:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+231371-v1.0.0/epan/emem.c:1031:39: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ g_vsnprintf (dst, (gulong) len, fmt, ap2);
+                                      ^
+231371-v1.0.0/epan/emem.c:1032:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+231371-v1.0.0/epan/emem.c:2268:12: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ G_VA_COPY(ap2, ap);
+           ^
+231371-v1.0.0/epan/emem.c:2280:79: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+  full_len = g_vsnprintf(&strbuf->str[strbuf->len], (gulong) add_len, format, ap2);
+                                                                              ^
+231371-v1.0.0/epan/emem.c:2284:2: error: va_list 'ap2' used before va_start() was called. [va_list_usedBeforeStarted]
+ va_end(ap2);
+ ^
+231371-v1.0.0/epan/emem.c:416:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   fprintf (stderr, "\tChunk allocation size: %10u\n", EMEM_PACKET_CHUNK_SIZE);
+   ^
+231371-v1.0.0/epan/emem.c:494:2: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+ fprintf (stderr, "\tChunk allocation size: %10u\n",
+ ^
+231372-v1.0.0/epan/dissectors/packet-isakmp.c:4897:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_BUFFER_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_BUFFER_CB_DEF(ikev1_users, icookie, ikev1_uat_data_key_t, icookie, icookie_len)
+^
+231374-v1.0.0/epan/proto.c:3967:14: error: There is an unknown macro here somewhere. Configuration is required. If STRINGIFY is a macro then please configure it. [unknownMacro]
+        "%." STRINGIFY(FLT_DIG) "g", fvalue_get_floating(&finfo->value));
+             ^
+231379-v1.0.0/epan/dissectors/packet-gsm_rlcmac.c:1369:1: error: There is an unknown macro here somewhere. Configuration is required. If CSN_DESCR_END is a macro then please configure it. [unknownMacro]
+CSN_DESCR_END     (EGPRS_AckNack_Desc_t)
+^
+231380-v1.0.0/epan/dissectors/packet-http.c:199:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(header_fields, header_name, header_field_t)
+^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231380-v1.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v2.0.0/epan/dissectors/packet-http.c:199:1: error: There is an unknown macro here somewhere. Configuration is required. If UAT_CSTRING_CB_DEF is a macro then please configure it. [unknownMacro]
+UAT_CSTRING_CB_DEF(header_fields, header_name, header_field_t)
+^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:4392:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    pinfo->private_data = &tcpinfo;
+    ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:801:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:801:55: note: Null pointer dereference
+printf("FWD list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->fwd->lastsegmentflags,tcpd->fwd->base_seq);for(ual=tcpd->fwd->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:802:55: warning: Either the condition '!tcpd' is redundant or there is possible null pointer dereference: tcpd. [nullPointerRedundantCheck]
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:805:9: note: Assuming that condition '!tcpd' is not redundant
+    if (!tcpd) {
+        ^
+231380-v2.0.0/epan/dissectors/packet-tcp.c:802:55: note: Null pointer dereference
+printf("REV list lastflags:0x%04x base_seq:0x%08x:\n",tcpd->rev->lastsegmentflags,tcpd->rev->base_seq);for(ual=tcpd->rev->segments;ual;ual=ual->next)printf("Frame:%d Seq:%d Nextseq:%d\n",ual->frame,ual->seq,ual->nextseq);
+                                                      ^
